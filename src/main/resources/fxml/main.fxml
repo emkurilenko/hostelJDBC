@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.kurilenko.controller.MainController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F5EBFF;">
+        <top>
+            <HBox prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #413685;"
+                  BorderPane.alignment="CENTER">
+                <children>
+                    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                            <Label prefHeight="31.0" prefWidth="100.0" text="PSU.BY HOSTEL" textAlignment="CENTER"
+                                   textFill="#f6ebff" wrapText="true">
+                                <font>
+                                    <Font name="Verdana Bold" size="12.0"/>
+                                </font>
+                            </Label>
+                            <Label fx:id="currentUserName" text="userName" textAlignment="CENTER" textFill="#f6ebff">
+                                <font>
+                                    <Font name="Verdana" size="11.0"/>
+                                </font>
+                            </Label>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+        </top>
+    </BorderPane>
+
+</AnchorPane>
