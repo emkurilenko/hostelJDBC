@@ -7,7 +7,7 @@ public class UserNotFoundException extends ResourceNotFoundException {
     private final String username;
 
     public UserNotFoundException(String username){
-        super(String.format("User with USERNAME = ? has not been found", username));
+        super(String.format("User with USERNAME = %s has not been found", username));
         this.username = username;
     }
 

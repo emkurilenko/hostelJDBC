@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.IOException;
+
 @Getter
 @Setter
 
@@ -16,10 +18,14 @@ public class MainController {
     private User currentUser;
 
     @FXML
-    private Label currentUserName;
+    private RoomController roomController;
 
     @FXML
-    public void initialize() {
+    private Label currentUserName;
+
+
+    @FXML
+    public void initialize() throws IOException {
         Platform.runLater(() -> {
             currentUserName.setText(currentUser.getUsername());
         });
