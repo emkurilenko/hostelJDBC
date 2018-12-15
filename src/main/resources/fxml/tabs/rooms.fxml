@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.layout.BorderPane?>
-<BorderPane fx:id="roomTab" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kurilenko.controller.RoomController">
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="roomTab" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kurilenko.controller.room.RoomController">
     <center>
-        <JFXTreeTableView fx:id="tableViewRooms" BorderPane.alignment="CENTER"/>
+        <JFXTreeTableView fx:id="tableViewRooms" BorderPane.alignment="CENTER">
+        </JFXTreeTableView>
     </center>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnAddRoom" onMouseClicked="#btnAddRoomMouseClicked" prefHeight="100.0" prefWidth="100.0" ripplerFill="#757de8" text="Добавить комнту" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnInfoRoom" onMouseClicked="#btnInfoRoomMouseClicked" prefHeight="100.0" prefWidth="100.0" ripplerFill="#757de8" text="Подробнее" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDelRoom" onMouseClicked="#btnDelRoomMouseClicked" prefHeight="100.0" prefWidth="100.0" ripplerFill="#757de8" text="Удалить" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </right>
 </BorderPane>

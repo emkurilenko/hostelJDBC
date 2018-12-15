@@ -77,7 +77,7 @@
          <bottom>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#btnLogin" text="Вход" textAlignment="CENTER">
+                  <Button mnemonicParsing="false" onAction="#btnLogin" onMouseClicked="#btnLoginMouseClicked" text="Вход" textAlignment="CENTER">
                      <HBox.margin>
                         <Insets right="15.0" />
                      </HBox.margin>

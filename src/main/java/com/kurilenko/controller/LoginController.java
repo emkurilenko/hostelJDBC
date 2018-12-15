@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.Setter;
@@ -45,6 +46,14 @@ public class LoginController {
 
     @FXML
     void btnLogin(ActionEvent event) {
+    }
+
+    @FXML
+    void btnLoginMouseClicked(MouseEvent event) {
+        loadAndCheckUser();
+    }
+
+    private void loadAndCheckUser(){
         User user = new User();
         user.setUsername(fieldLogin.getText());
         user.setPassword(MD5.getHash(filedPassword.getText()));
@@ -54,7 +63,6 @@ public class LoginController {
                 FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("fxml/main.fxml"));
                 Parent parent = (Parent)loader.load();
                 MainController mainController = loader.getController();
-
                 primaryStage.setScene(new Scene(parent));
                 mainController.setPrimaryStage(primaryStage);
                 mainController.setCurrentUser(user);

@@ -14,7 +14,7 @@ public class Room {
   private Long numberRoom;
   private Double square;
   private Long fkFloors;
-  private Long fkRoomSpecification;
+  private Long roomSpecification;
   private Long number;
   private Long fkHostel;
 }

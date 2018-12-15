@@ -1,42 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kurilenko.controller.MainController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kurilenko.controller.MainController">
 
     <BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F5EBFF;">
         <top>
-            <HBox prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #413685;"
-                  BorderPane.alignment="CENTER">
+            <HBox prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #4a0072;" BorderPane.alignment="CENTER">
                 <children>
                     <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
                         <children>
-                            <Label prefHeight="31.0" prefWidth="100.0" text="PSU.BY HOSTEL" textAlignment="CENTER"
-                                   textFill="#f6ebff" wrapText="true">
+                            <Label prefHeight="31.0" prefWidth="100.0" text="PSU.BY HOSTEL" textAlignment="CENTER" textFill="#f6ebff" wrapText="true">
                                 <font>
-                                    <Font name="Verdana Bold" size="12.0"/>
+                                    <Font name="Verdana Bold" size="12.0" />
                                 </font>
                             </Label>
                             <Label fx:id="currentUserName" text="userName" textAlignment="CENTER" textFill="#f6ebff">
                                 <font>
-                                    <Font name="Verdana" size="11.0"/>
+                                    <Font name="Verdana" size="11.0" />
                                 </font>
                             </Label>
                         </children>
                     </VBox>
+               <JFXButton fx:id="btnOptionForAdmin" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#btnSettingForAdminMouseClicked" text="Настройки" textAlignment="CENTER" textFill="WHITE" visible="false" wrapText="true">
+                  <font>
+                     <Font name="Verdana" size="12.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets top="10.0" />
+                  </HBox.margin>
+               </JFXButton>
                 </children>
             </HBox>
         </top>
         <center>
-            <JFXTabPane BorderPane.alignment="CENTER">
+            <JFXTabPane stylesheets="@../style/tab-bar.css" BorderPane.alignment="CENTER">
                 <tabs>
                     <Tab text="Комнаты">
                         <content>
-                            <fx:include fx:id="roomTab" source="tabs/rooms.fxml"/>
+                            <fx:include fx:id="roomTab" source="tabs/rooms.fxml" />
                         </content>
                     </Tab>
                     <Tab text="Жильцы">
