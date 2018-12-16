@@ -12,7 +12,7 @@ public class PaymentsDAOImpl implements PaymentsDAO {
     }
 
     @Override
-    public void delete(Payment payment) {
+    public void delete(Long payment) {
 
     }
 

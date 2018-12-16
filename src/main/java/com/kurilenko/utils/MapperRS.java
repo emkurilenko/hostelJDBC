@@ -4,6 +4,7 @@ import com.kurilenko.entity.*;
 import com.kurilenko.entity.enums.Gender;
 import com.kurilenko.entity.enums.OccupantType;
 import com.kurilenko.entity.enums.StatusFamily;
+import com.kurilenko.entity.enums.UserRole;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -71,7 +72,7 @@ public class MapperRS{
     }
 
     public Hostels rowMapperHostels(ResultSet rs) throws SQLException {
-        return new Hostels(rs.getLong(1), rs.getString(2), rs.getString(3));
+        return new Hostels(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getLong(4));
     }
 
     public InventoryType rowMapperInventoryType(ResultSet rs) throws SQLException {
@@ -149,5 +150,12 @@ public class MapperRS{
                 rs.getString(4),
                 rs.getLong(5),
                 rs.getLong(6));
+    }
+
+    public UserInfo rowMapperUserInfo(ResultSet resultSet) throws SQLException {
+        return new UserInfo(resultSet.getLong(1),
+                resultSet.getString(2),
+                UserRole.valueOf(resultSet.getString(3)),
+                resultSet.getString(4));
     }
 }

@@ -1,6 +1,7 @@
 package com.kurilenko.service;
 
 import com.kurilenko.dao.impl.RoomDAOImpl;
+import com.kurilenko.entity.Room;
 import com.kurilenko.entity.RoomInfo;
 import com.kurilenko.entity.RoomProperty;
 import javafx.collections.FXCollections;
@@ -13,6 +14,11 @@ public class RoomService {
 
     public RoomService(){
         roomDAO = new RoomDAOImpl();
+    }
+
+    public Long saveRoom(Room room){
+       Long id = roomDAO.save(room);
+       return id;
     }
 
     public ObservableList<RoomProperty> getAllInfoRoom(Long id){
@@ -28,5 +34,9 @@ public class RoomService {
                 roomInfo.getOccupiedBeds(),
                 roomInfo.getNumberofbeds(),
                 roomInfo.getRoomSpecification());
+    }
+
+    public void delete(RoomProperty roomProperty) {
+        roomDAO.delete(Long.valueOf(roomProperty.getId().getValue()));
     }
 }

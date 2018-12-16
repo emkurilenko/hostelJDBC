@@ -2,6 +2,7 @@ package com.kurilenko.controller;
 
 import com.kurilenko.entity.User;
 import com.kurilenko.service.UserService;
+import com.kurilenko.utils.CurrentSession;
 import com.kurilenko.utils.MD5;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -65,7 +66,7 @@ public class LoginController {
                 MainController mainController = loader.getController();
                 primaryStage.setScene(new Scene(parent));
                 mainController.setPrimaryStage(primaryStage);
-                mainController.setCurrentUser(user);
+                CurrentSession.user = user;
             }catch (IOException e){
                 System.out.println(e);
             }

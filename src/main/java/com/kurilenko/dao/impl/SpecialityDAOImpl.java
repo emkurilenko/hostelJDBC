@@ -12,7 +12,7 @@ public class SpecialityDAOImpl implements SpecialityDAO {
     }
 
     @Override
-    public void delete(Specialty specialty) {
+    public void delete(Long id) {
 
     }
 

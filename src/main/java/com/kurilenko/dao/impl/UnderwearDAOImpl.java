@@ -12,7 +12,7 @@ public class UnderwearDAOImpl implements UnderwearDAO {
     }
 
     @Override
-    public void delete(Underwear underwear) {
+    public void delete(Long id) {
 
     }
 

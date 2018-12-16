@@ -1,18 +1,17 @@
 package com.kurilenko.entity;
 
 import com.kurilenko.entity.enums.UserRole;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
 
-@ToString
-
-@NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class UserInfo {
     private Long id;
     private String username;
-    private String password;
-    private UserRole userRole;
+    private UserRole role;
+    private String hostel;
 }

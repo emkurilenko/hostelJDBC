@@ -7,8 +7,11 @@ import com.jfoenix.controls.RecursiveTreeItem;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import com.kurilenko.controller.MainController;
 import com.kurilenko.entity.RoomProperty;
+import com.kurilenko.entity.User;
 import com.kurilenko.service.RoomService;
+import com.kurilenko.utils.CurrentSession;
 import com.kurilenko.utils.HelperWorkWithModalityWindow;
+import javafx.beans.binding.Bindings;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -33,6 +36,7 @@ public class RoomController {
 
     private MainController mainController;
 
+    private ObservableList<RoomProperty> data;
     private RoomService roomService;
 
     JFXTreeTableColumn<RoomProperty, String> roomFloor;
@@ -40,6 +44,8 @@ public class RoomController {
     JFXTreeTableColumn<RoomProperty, String> busyNumRoom;
     JFXTreeTableColumn<RoomProperty, String> summaryNumRoom;
     JFXTreeTableColumn<RoomProperty, String> specificationRoom;
+
+    private User currentUser;
 
     @FXML
     private JFXButton btnAddRoom;
@@ -52,6 +58,10 @@ public class RoomController {
 
     @FXML
     public void initialize() {
+        /*Platform.runLater(() -> {
+            currentUser = CurrentSession.user;
+        });*/
+        currentUser = CurrentSession.user;
         roomService = new RoomService();
         initializeTable();
     }
@@ -68,6 +78,9 @@ public class RoomController {
     }
 
     private void initializeTable() {
+       /* if (currentUser.getUserRole() != UserRole.ROLE_ADMIN) {
+            btnDelRoom.setDisable(false);
+        }*/
         roomFloor = new JFXTreeTableColumn<>("Этаж");
         numberRoom = new JFXTreeTableColumn<>("Номер");
         busyNumRoom = new JFXTreeTableColumn<>("Занято");
@@ -81,24 +94,38 @@ public class RoomController {
         specificationRoom.setPrefWidth(150);
 
         setupCellValueFactory(roomFloor, RoomProperty::getRoomFloor);
-        setupCellValueFactory(numberRoom, RoomProperty::getRoomFloor);
+        setupCellValueFactory(numberRoom, RoomProperty::getNumberRoom);
         setupCellValueFactory(busyNumRoom, RoomProperty::getBusyNumRoom);
         setupCellValueFactory(summaryNumRoom, RoomProperty::getSummaryNumRoom);
         setupCellValueFactory(specificationRoom, RoomProperty::getSpecificationRoom);
 
-        ObservableList<RoomProperty> data = roomService.getAllInfoRoom(1L);
-        tableViewRooms.setRoot(new RecursiveTreeItem<>(data, RecursiveTreeObject::getChildren));
+        refreshData();
         tableViewRooms.setShowRoot(false);
+
+
+        btnDelRoom.disableProperty().bind(Bindings.equal(-1, tableViewRooms.getSelectionModel().selectedIndexProperty()));
+
+        btnDelRoom.setOnMouseClicked(event -> {
+            RoomProperty roomProperty = data.get(tableViewRooms.getSelectionModel().selectedIndexProperty().get());
+            data.remove(tableViewRooms.getSelectionModel().selectedIndexProperty().get());
+            roomService.delete(roomProperty);
+        });
 
         tableViewRooms.getColumns().setAll(roomFloor, numberRoom, busyNumRoom, summaryNumRoom, specificationRoom);
     }
 
 
+    private void refreshData() {
+        data = roomService.getAllInfoRoom(1L);
+        tableViewRooms.setRoot(new RecursiveTreeItem<>(data, RecursiveTreeObject::getChildren));
+    }
+
     @FXML
     void btnAddRoomMouseClicked(MouseEvent event) {
         try {
-            HelperWorkWithModalityWindow.loadNewModalityWindow("fxml/add/add_room.fxml","Добавление комнаты", ((Node)event.getSource()).getScene().getWindow());
-        }catch (IOException e){
+            HelperWorkWithModalityWindow.loadNewModalityWindow("fxml/add/add_room.fxml", "Добавление комнаты", ((Node) event.getSource()).getScene().getWindow());
+            refreshData();
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
@@ -111,8 +138,8 @@ public class RoomController {
     @FXML
     void btnInfoRoomMouseClicked(MouseEvent event) {
         try {
-            HelperWorkWithModalityWindow.loadNewModalityWindow("fxml/info/info_room.fxml","Информация", ((Node)event.getSource()).getScene().getWindow());
-        }catch (IOException e){
+            HelperWorkWithModalityWindow.loadNewModalityWindow("fxml/info/info_room.fxml", "Информация", ((Node) event.getSource()).getScene().getWindow());
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }

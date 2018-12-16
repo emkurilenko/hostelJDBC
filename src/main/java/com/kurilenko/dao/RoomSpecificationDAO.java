@@ -1,6 +1,7 @@
 package com.kurilenko.dao;
 
-import com.kurilenko.entity.Room;
+import com.kurilenko.entity.RoomSpecification;
 
-public interface RoomSpecificationDAO extends BaseDAO<Room, Long> {
+public interface RoomSpecificationDAO extends BaseDAO<RoomSpecification, Long> {
+    RoomSpecification getOneByType(String name);
 }

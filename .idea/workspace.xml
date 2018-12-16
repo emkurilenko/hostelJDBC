@@ -2,31 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06042344-1596-4848-897c-5102799dbe26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/AdminSettingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/AddRoomController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/InfoRoomController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/RoomController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/RoomInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/RoomProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/HelperWorkWithModalityWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/add/add_room.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/admin/admin_setting.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/info/info_room.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/style/tab-bar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/users/AdminWorkWithUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/users/UserAddController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/users/UserEditController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/occupant/OccupantController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/HostelsDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/OccupantDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/OccupantProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/UserProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/service/HostelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/service/OccupantService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/service/RoomSpecificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/CurrentSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/admin/add_user.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/admin/work_with_user.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/RoomController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/RoomDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/OccupantController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/AdminSettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/AdminSettingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/AddRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/AddRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/BaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/HostelsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/HostelsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/RoomSpecificationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/RoomSpecificationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/ParentsDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/ParentsDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/PaymentsDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/PaymentsDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomSpecificationDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomSpecificationDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/SettlementDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/SettlementDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/SpecialityDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/SpecialityDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/StudentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/StudentDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UnderwearDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UnderwearDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Hostels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Hostels.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/service/MapperRS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/service/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/HelperWorkWithModalityWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/HelperWorkWithModalityWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/MapperRS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/MapperRS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/tabs/rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/tabs/rooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/impl/MapperRSImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/add/add_room.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/add/add_room.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/admin/admin_setting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/admin/admin_setting.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/tabs/occupant.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/tabs/occupant.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -116,30 +137,30 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1" />
-          <entry key="fxml" value="239" />
-          <entry key="java" value="9356" />
+          <entry key="fxml" value="264" />
+          <entry key="java" value="18436" />
           <entry key="properties" value="6" />
           <entry key="sql" value="7" />
-          <entry key="txt" value="40" />
+          <entry key="txt" value="49" />
           <entry key="xml" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="JAVA" value="9356" />
-          <entry key="PLAIN_TEXT" value="40" />
+          <entry key="JAVA" value="18436" />
+          <entry key="PLAIN_TEXT" value="49" />
           <entry key="Properties" value="6" />
           <entry key="SQL" value="7" />
-          <entry key="XML" value="267" />
+          <entry key="XML" value="292" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="3" />
           <entry key="css" value="1" />
-          <entry key="fxml" value="35" />
-          <entry key="java" value="258" />
+          <entry key="fxml" value="48" />
+          <entry key="java" value="413" />
           <entry key="properties" value="1" />
           <entry key="sql" value="1" />
           <entry key="users" value="3" />
@@ -151,45 +172,24 @@
           <entry key="CLASS" value="3" />
           <entry key="CSS" value="1" />
           <entry key="Database Element" value="3" />
-          <entry key="JAVA" value="258" />
+          <entry key="JAVA" value="413" />
           <entry key="Properties" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="37" />
+          <entry key="XML" value="50" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/admin/admin_setting.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/AdminSettingController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/occupant/OccupantController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+            <state relative-caret-position="166">
+              <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#setupCellValueFactory#0;class#OccupantController#0" />
               </folding>
             </state>
           </provider>
@@ -198,8 +198,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="38" column="5" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="198">
+              <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -208,25 +208,63 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/RoomController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/service/OccupantService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+            <state relative-caret-position="204">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#initialize#0;class#RoomController#0" />
-                <element signature="method#setupCellValueFactory#0;class#RoomController#0" />
+                <element signature="e#257#258#0" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/OccupantDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            <state relative-caret-position="68">
+              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/OccupantDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="29" selection-start-column="29" selection-end-column="29" />
+              <folding>
+                <element signature="e#242#243#0" expanded="true" />
+                <element signature="e#269#270#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/OccupantProperty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/AddRoomController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="66" column="97" selection-start-line="66" selection-start-column="97" selection-end-line="66" selection-end-column="97" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#checkFiledSquer#0;class#AddRoomController#0" />
+                <element signature="method#checkNumberRoom#0;class#AddRoomController#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -250,6 +288,8 @@
       <find>Repo</find>
       <find>RequiredField</find>
       <find>Roo</find>
+      <find>roomSpecificationService</find>
+      <find>comboBoxSpecification</find>
     </findStrings>
     <replaceStrings>
       <replace>DAO</replace>
@@ -268,57 +308,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomSpecificationDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/SettlementDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/SettlementDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/SpecialityDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/SpecialityDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/StudentDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/StudentDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/UnderwearDAP.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/UnderwearDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UnderwearDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/MD5.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/enums/UserRole.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/exception/NotFoundEntityException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/exception/UserNotFound.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/WorkWithController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/test.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/main.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/MainApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/tabs/occupant.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/exception/UserNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/RoomDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/impl/MapperRSImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/impl/MapperRS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/service/MapperRS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/RoomInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/MapperRS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/RoomProperty.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/service/RoomService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/style/tab-bar.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/HelperWorkWithModalityWindow.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/RoomController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/AddRoomController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/add/add_room.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/info/info_room.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/tabs/rooms.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/RoomController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/admin/admin_modality.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/admin/admin_setting.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/admin/work_with_user.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/AdminSettingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/AdminWorkWithUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/service/HosetelService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/UserInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/UserProperty.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/BaseDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/ParentsDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/PaymentsDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/SettlementDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/SpecialityDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/StudentDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UnderwearDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/admin/add_user.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/CurrentSession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/MapperRS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/utils/HelperWorkWithModalityWindow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/users/UserAddController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/HostelsDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomSpecificationDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/RoomSpecificationDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/service/RoomService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/service/HostelService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/service/RoomSpecificationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/HostelsDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/student/OccupantController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/users/AdminWorkWithUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/tabs/occupant.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/users/UserEditController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/RoomController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Hostels.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/AddRoomController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/OccupantDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/service/OccupantService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/entity/OccupantProperty.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kurilenko/controller/occupant/OccupantController.java" />
       </list>
     </option>
   </component>
@@ -329,10 +369,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -348,11 +388,6 @@
             <path>
               <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
               <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
@@ -396,7 +431,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kurilenko" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
@@ -405,40 +441,62 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kurilenko" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-              <item name="add" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kurilenko" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="occupant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kurilenko" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="room" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kurilenko" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hostelJdbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hostelJdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -448,9 +506,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="SearchEverywhereHistoryKey" value="OccupantP&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/entity/OccupantProperty.java&#10;Occ&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/entity/OccupantProperty.java&#10;UserContr&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/controller/admin/users/AdminWorkWithUserController.java&#10;RoomIn&#9;PSI&#9;JAVA://com.kurilenko.entity.RoomInfo&#10;Room&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/controller/room/RoomController.java&#10;RoomDa&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/dao/impl/RoomDAOImpl.java&#10;USERDA&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/dao/impl/UserDAOImpl.java&#10;comboBoxSpecificationAction&#9;null&#9;null&#10;User&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/controller/admin/users/UserEditController.java&#10;Hostel&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/service/HostelService.java&#10;UserAd&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/controller/admin/users/UserAddController.java&#10;Spec&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/dao/impl/RoomSpecificationDAOImpl.java&#10;Hoste&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/service/HostelService.java&#10;Roo&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/service/RoomService.java&#10;Add&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/controller/room/AddRoomController.java&#10;Base&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/dao/BaseDAO.java&#10;Host&#9;FILE&#9;file://C:/Users/kuril/Documents/hostelJdbc/src/main/java/com/kurilenko/dao/HostelsDAO.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544840446837" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544998707020" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/SceneBuilder/SceneBuilder.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -461,21 +520,21 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kuril\Documents\hostelJdbc\lib" />
-      <recent name="C:\Users\kuril\Documents\hostelJdbc\src\main\resources" />
-      <recent name="C:\Users\kuril\Documents\hostelJdbc\src\main\resources\fxml" />
-      <recent name="C:\Users\kuril\Documents\hostelJdbc\src\main\java\com\kurilenko\entity" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kuril\Documents\hostelJdbc\src\main\java\com\kurilenko\mappers" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.kurilenko.dao.impl" />
       <recent name="com.kurilenko.dao" />
       <recent name="com.kurilenko.repo.impl" />
       <recent name="com.kurilenko.repo" />
       <recent name="com.kurilenko.utils.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kuril\Documents\hostelJdbc\src\main\java\com\kurilenko\mappers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kuril\Documents\hostelJdbc\lib" />
+      <recent name="C:\Users\kuril\Documents\hostelJdbc\src\main\resources" />
+      <recent name="C:\Users\kuril\Documents\hostelJdbc\src\main\resources\fxml" />
+      <recent name="C:\Users\kuril\Documents\hostelJdbc\src\main\java\com\kurilenko\entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -524,7 +583,7 @@
       <workItem from="1544546199181" duration="14669000" />
       <workItem from="1544564912701" duration="3199000" />
       <workItem from="1544637154931" duration="20139000" />
-      <workItem from="1544833311107" duration="6931000" />
+      <workItem from="1544833311107" duration="49547000" />
     </task>
     <task id="LOCAL-00001" summary="add user login">
       <created>1544566930473</created>
@@ -540,17 +599,24 @@
       <option name="project" value="LOCAL" />
       <updated>1544652743950</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add room table">
+      <created>1544840516615</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544840516615</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55441000" />
+    <option name="totallyTimeSpent" value="98057000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16471216" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23373677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -559,8 +625,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.019313306" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4356223" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27580646" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44677418" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -569,7 +635,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="11" weight="0.32903227" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32939914" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32903227" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -580,6 +646,37 @@
       <window_info anchor="right" id="Database" order="7" weight="0.16414523" />
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23373677" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.019313306" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.11451613" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44677418" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.22532189" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Console" order="11" weight="0.32903227" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32903227" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.16414523" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -591,249 +688,160 @@
     <MESSAGE value="add" />
     <MESSAGE value="add user login" />
     <MESSAGE value="add main tab" />
-    <option name="LAST_COMMIT_MESSAGE" value="add main tab" />
+    <MESSAGE value="add room table" />
+    <option name="LAST_COMMIT_MESSAGE" value="add room table" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/occupant/OccupantController.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/com/sun/javafx/event/EventHandlerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="237" selection-start-line="237" selection-end-line="237" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/com/sun/javafx/event/CompositeEventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/fxml/main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/TestController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/main.fxml" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="198" selection-start-line="198" selection-end-line="198" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8411" selection-start-line="8411" selection-end-line="8411" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/Button.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="186" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/stage/Stage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="251" selection-start-line="251" selection-end-line="251" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/RoomSpecification.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Faculty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/OccupantController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/exception/UserNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="55" column="42" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="238">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/RoomDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/ExistingInventory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        <state relative-caret-position="153">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/service/MapperRS.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/utils/MapperRS.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/PaymentsDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/utils/DBConnectionManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UnderwearDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/StudentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/SpecialityDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/SettlementDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/admin/add_user.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/utils/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="25" />
+        <state relative-caret-position="391">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Room.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="-201">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/RoomInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/utils/CurrentSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="170">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/jfoenix/jfoenix/8.0.8/jfoenix-8.0.8.jar!/com/jfoenix/controls/JFXTreeTableColumn.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/jfoenix/jfoenix/9.0.8/jfoenix-9.0.8.jar!/com/jfoenix/controls/JFXTreeTableColumn.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/BaseDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/service/RoomService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="544">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/RoomProperty.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="2234" column="17" selection-start-line="2234" selection-start-column="17" selection-end-line="2234" selection-end-column="17" />
+          <folding>
+            <element signature="e#66921#66922#0" expanded="true" />
+            <element signature="e#66966#66967#0" expanded="true" />
+            <element signature="e#79010#79011#0" expanded="true" />
+            <element signature="e#79046#79047#0" expanded="true" />
+            <element signature="e#79248#79249#0" expanded="true" />
+            <element signature="e#79295#79296#0" expanded="true" />
+            <element signature="e#83880#83881#0" expanded="true" />
+            <element signature="e#83916#83917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/MainApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Long.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/style/tab-bar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/input/KeyEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="92" column="44" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/AddRoomController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#180#181#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="145">
+          <caret line="774" column="80" selection-start-line="774" selection-start-column="52" selection-end-line="774" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -844,132 +852,338 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/HostelsDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="1772" selection-start-line="1772" selection-end-line="1772" />
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomSpecificationDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="67" column="41" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/RoomSpecificationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/service/HostelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="34" />
           <folding>
-            <element signature="e#66921#66922#0" expanded="true" />
-            <element signature="e#66966#66967#0" expanded="true" />
-            <element signature="e#79010#79011#0" expanded="true" />
-            <element signature="e#79046#79047#0" expanded="true" />
-            <element signature="e#79248#79249#0" expanded="true" />
-            <element signature="e#79295#79296#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/MainApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        <state relative-caret-position="238">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/info/info_room.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/service/RoomSpecificationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        <state relative-caret-position="357">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/utils/HelperWorkWithModalityWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        <state relative-caret-position="120">
+          <caret line="29" column="96" selection-start-line="29" selection-start-column="90" selection-end-line="29" selection-end-column="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2071#2072#0" expanded="true" />
+            <element signature="e#2117#2118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/HostelsDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+          <folding>
+            <element signature="method#getAll#0;class#HostelsDAOImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/ParentsDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/RoomInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/utils/MapperRS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#MapperRS#0;class#MapperRS#0" />
+            <element signature="method#rowMapperContract#0;class#MapperRS#0" />
+            <element signature="method#rowMapperDepartment#0;class#MapperRS#0" />
+            <element signature="method#rowMapperEmployees#0;class#MapperRS#0" />
+            <element signature="method#rowMapperExistingInventory#0;class#MapperRS#0" />
+            <element signature="method#rowMapperFaculty#0;class#MapperRS#0" />
+            <element signature="method#rowMapperFamilies#0;class#MapperRS#0" />
+            <element signature="method#rowMapperFloors#0;class#MapperRS#0" />
+            <element signature="method#rowMapperGroupStudents#0;class#MapperRS#0" />
+            <element signature="method#rowMapperHostels#0;class#MapperRS#0" />
+            <element signature="method#rowMapperInventoryType#0;class#MapperRS#0" />
+            <element signature="method#rowMapperIssuedLinen#0;class#MapperRS#0" />
+            <element signature="method#rowMapperOccupant#0;class#MapperRS#0" />
+            <element signature="method#rowMapperParents#0;class#MapperRS#0" />
+            <element signature="method#rowMapperPayment#0;class#MapperRS#0" />
+            <element signature="method#rowMapperRoomSpecification#0;class#MapperRS#0" />
+            <element signature="method#rowMapperSettlement#0;class#MapperRS#0" />
+            <element signature="method#rowMapperSpecialty#0;class#MapperRS#0" />
+            <element signature="method#rowMapperStudent#0;class#MapperRS#0" />
+            <element signature="method#rowMapperUnderwear#0;class#MapperRS#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/RoomDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="69" column="99" selection-start-line="69" selection-start-column="99" selection-end-line="69" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/RoomProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/add/add_room.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/UserProperty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+        <state relative-caret-position="153">
+          <caret line="9" column="67" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/tabs/rooms.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="104" selection-start-line="8" selection-start-column="104" selection-end-line="8" selection-end-column="104" />
+        <state relative-caret-position="119">
+          <caret line="7" column="201" selection-start-line="7" selection-start-column="187" selection-end-line="7" selection-end-column="201" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/tabs/occupant.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="102">
+          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="6" column="88" selection-start-line="6" selection-start-column="88" selection-end-line="6" selection-end-column="88" />
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#saveUser#0;class#UserService#0" />
+            <element signature="method#existUser#0;class#UserService#0" />
+            <element signature="method#getAllUserProperty#0;class#UserService#0" />
+            <element signature="method#createUserProperty#0;class#UserService#0" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/users/UserEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="68" column="40" lean-forward="true" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/service/RoomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="135" column="59" selection-start-line="135" selection-start-column="48" selection-end-line="135" selection-end-column="59" />
+          <folding>
+            <element signature="method#getAll#0;class#UserDAOImpl#0" />
+            <element signature="method#getUser#0;class#UserDAOImpl#0" />
+            <element signature="method#createUser#0;class#UserDAOImpl#0" />
+            <element signature="method#getAllUserInfo#0;class#UserDAOImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/Hostels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/users/UserAddController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="45" column="43" lean-forward="true" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/users/AdminWorkWithUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="95" column="92" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setupCellValueFactory#0;class#AdminWorkWithUserController#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/RoomController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+        <state relative-caret-position="167">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#RoomController#0" />
             <element signature="method#setupCellValueFactory#0;class#RoomController#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/room/AddRoomController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="256">
+          <caret line="66" column="97" selection-start-line="66" selection-start-column="97" selection-end-line="66" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkFiledSquer#0;class#AddRoomController#0" />
+            <element signature="method#checkNumberRoom#0;class#AddRoomController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/OccupantDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/dao/impl/OccupantDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/entity/OccupantProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/admin/admin_setting.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/service/OccupantService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="198">
+          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/admin/AdminSettingController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kurilenko/controller/occupant/OccupantController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="166">
+          <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#setupCellValueFactory#0;class#OccupantController#0" />
           </folding>
         </state>
       </provider>

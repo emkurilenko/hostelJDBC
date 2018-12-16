@@ -12,7 +12,7 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public void delete(Student student) {
+    public void delete(Long id) {
 
     }
 

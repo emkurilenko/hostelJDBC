@@ -12,7 +12,7 @@ public class ParentsDAOImpl implements ParentsDAO {
     }
 
     @Override
-    public void delete(Parents parents) {
+    public void delete(Long parents) {
 
     }
 

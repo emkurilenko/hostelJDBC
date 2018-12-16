@@ -11,7 +11,7 @@ public class SettlementDAOImpl implements SettlementDAO {
     }
 
     @Override
-    public void delete(SettlementDAO settlementDAO) {
+    public void delete(Long id) {
 
     }
 

@@ -4,8 +4,11 @@ import com.jfoenix.controls.JFXButton;
 import com.kurilenko.controller.room.RoomController;
 import com.kurilenko.entity.User;
 import com.kurilenko.entity.enums.UserRole;
+import com.kurilenko.utils.CurrentSession;
+import com.kurilenko.utils.HelperWorkWithModalityWindow;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -33,6 +36,7 @@ public class MainController {
     @FXML
     public void initialize() throws IOException {
         Platform.runLater(() -> {
+            currentUser = CurrentSession.user;
             currentUserName.setText(currentUser.getUsername());
             if(currentUser.getUserRole() == UserRole.ROLE_ADMIN){
                 btnOptionForAdmin.setVisible(true);
@@ -41,7 +45,7 @@ public class MainController {
     }
 
     @FXML
-    private void btnSettingForAdminMouseClicked(MouseEvent event){
-
+    private void btnSettingForAdminMouseClicked(MouseEvent event) throws IOException{
+        HelperWorkWithModalityWindow.loadNewModalityWindow("fxml/admin/admin_setting.fxml", "Настройки админа", ((Node)event.getSource()).getScene().getWindow());
     }
 }

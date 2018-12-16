@@ -15,10 +15,11 @@ import java.util.List;
 
 public class RoomDAOImpl implements RoomDAO {
 
+    private String INSERT_ROOM = "insert into room (id,number_room,square,fk_room_specification,number,fk_hostel,floor) values (DEFAULT,?,?,?,?,?,?) returning id";
     private MapperRS mapperRS;
     private final Connection connection;
 
-    public RoomDAOImpl(){
+    public RoomDAOImpl() {
         this.connection = DBConnection.getInstance().getConnction();
         this.mapperRS = MapperRS.getInstance();
     }
@@ -26,21 +27,31 @@ public class RoomDAOImpl implements RoomDAO {
     @Override
     public Long save(Room room) {
         Long id = null;
-        try (PreparedStatement preparedStatement = connection.prepareStatement("")) {
+        try (PreparedStatement preparedStatement = connection.prepareStatement(INSERT_ROOM)) {
+            preparedStatement.setLong(1, room.getNumberRoom());
+            preparedStatement.setDouble(2, room.getSquare());
+            preparedStatement.setLong(3, room.getRoomSpecification());
+            preparedStatement.setLong(4, room.getNumber());
+            preparedStatement.setLong(5, room.getFkHostel());
+            preparedStatement.setLong(6, room.getFloors());
             ResultSet resultSet = preparedStatement.executeQuery();
-
-
-
+            resultSet.next();
+            id = resultSet.getLong(1);
             resultSet.close();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return id;
     }
 
     @Override
-    public void delete(Room room) {
-
+    public void delete(Long room) {
+        try (PreparedStatement preparedStatement = connection.prepareStatement("delete from room where id = ?")) {
+            preparedStatement.setLong(1, room);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
@@ -56,14 +67,14 @@ public class RoomDAOImpl implements RoomDAO {
     @Override
     public List<RoomInfo> getAllInfoRooms(Long idHostel) {
         List<RoomInfo> listRooms = new ArrayList<>();
-        try(PreparedStatement preparedStatement = connection.prepareStatement("select * from get_rooms_info(?)")) {
+        try (PreparedStatement preparedStatement = connection.prepareStatement("select * from get_rooms_info(?)")) {
             preparedStatement.setInt(1, idHostel.intValue());
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 listRooms.add(mapperRS.rowMapperRoomInfo(resultSet));
             }
             resultSet.close();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return listRooms;
