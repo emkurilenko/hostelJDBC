@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane fx:id="registrationTab" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kurilenko.controller.registration.RegistrationController">
+   <right>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton prefHeight="100.0" prefWidth="100.0" text="Заселить">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets left="25.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <center>
+      <VBox prefHeight="400.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="500.0">
+               <children>
+                  <HBox prefHeight="100.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Имя:" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="fieldName" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="25.0" right="15.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Фамилия:">
+                                 <font>
+                                    <Font name="Verdana" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="fieldFamily" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Отчество:">
+                                 <font>
+                                    <Font name="Verdana" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="fieldMiddleName" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Этаж">
+                                 <font>
+                                    <Font name="Verdana" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="comboBoxFloors" onAction="#comboBoxFloorsAction" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Комната">
+                                 <font>
+                                    <Font name="Verdana" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="comboBoxRoom" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Тип жителя">
+                                 <font>
+                                    <Font name="Verdana" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="comboBoxTypeOccupation" onAction="#comboBoxTypeOccupationAction" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hBoxStudent" prefHeight="50.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Факультет">
+                                 <font>
+                                    <Font name="Verdana" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="comboBoxFaculty" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Кафедра">
+                                 <font>
+                                    <Font name="Verdana" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="comboBoxDepartment" prefHeight="25.0" />
+                           </children>
+                        </VBox>
+                        <HBox fx:id="hBoxStudent" prefHeight="50.0" prefWidth="260.0">
+                           <children>
+                              <VBox prefHeight="50.0" prefWidth="130.0">
+                                 <children>
+                                    <Label text="Специальность">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXComboBox fx:id="comboBoxSpeciality" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0" prefWidth="125.0">
+                                 <children>
+                                    <Label text="Группа">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXComboBox fx:id="comboBoxGroupStudent" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="25.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

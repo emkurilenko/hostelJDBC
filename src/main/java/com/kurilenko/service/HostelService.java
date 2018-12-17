@@ -31,4 +31,9 @@ public class HostelService {
     public Hostels getHostelByName(String name){
         return hostelsDAO.getOneByName(name);
     }
+
+    public Hostels getHostelByUserId(Long id){
+        return hostelsDAO.getHostelByIdUser(id);
+    }
+
 }

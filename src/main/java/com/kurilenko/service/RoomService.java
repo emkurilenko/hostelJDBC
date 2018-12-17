@@ -7,6 +7,7 @@ import com.kurilenko.entity.RoomProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class RoomService {
@@ -34,6 +35,15 @@ public class RoomService {
                 roomInfo.getOccupiedBeds(),
                 roomInfo.getNumberofbeds(),
                 roomInfo.getRoomSpecification());
+    }
+
+    public List<Room> getAllRoom(){
+        return roomDAO.getAll();
+    }
+
+    public List<Long> getAllRoomNumber(Long floor){
+        getAllRoom().stream().forEach(r -> System.out.println(r));
+        return getAllRoom().stream().filter(room -> room.getFloors() == floor).map(room -> room.getNumberRoom()).collect(Collectors.toList());
     }
 
     public void delete(RoomProperty roomProperty) {

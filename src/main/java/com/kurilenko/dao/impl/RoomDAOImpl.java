@@ -16,6 +16,7 @@ import java.util.List;
 public class RoomDAOImpl implements RoomDAO {
 
     private String INSERT_ROOM = "insert into room (id,number_room,square,fk_room_specification,number,fk_hostel,floor) values (DEFAULT,?,?,?,?,?,?) returning id";
+    private String SELECT_ALL = "select * from room";
     private MapperRS mapperRS;
     private final Connection connection;
 
@@ -61,7 +62,16 @@ public class RoomDAOImpl implements RoomDAO {
 
     @Override
     public List<Room> getAll() {
-        return null;
+        List<Room> list = new ArrayList<>();
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL)) {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                list.add(mapperRS.rowMapperRoom(resultSet));
+            }
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return list;
     }
 
     @Override

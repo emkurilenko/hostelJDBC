@@ -21,10 +21,10 @@ public class OccupantProperty extends RecursiveTreeObject<OccupantProperty> {
     private StringProperty roomNumber;
     private StringProperty typeOccupant;
 
-    public OccupantProperty(Long id, String occupantName, String roomNumber, String typeOccupant){
+    public OccupantProperty(Long id, String occupantName, Long roomNumber, String typeOccupant){
         this.id = new SimpleLongProperty(id);
         this.occupantName = new SimpleStringProperty(occupantName);
-        this.roomNumber = new SimpleStringProperty(roomNumber);
+        this.roomNumber = new SimpleStringProperty(String.valueOf(roomNumber));
         this.typeOccupant = new SimpleStringProperty(typeOccupant);
     }
 }

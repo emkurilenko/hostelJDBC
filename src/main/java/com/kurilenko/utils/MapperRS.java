@@ -9,7 +9,7 @@ import com.kurilenko.entity.enums.UserRole;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class MapperRS{
+public class MapperRS {
     private static MapperRS singleton;
 
     private MapperRS() {
@@ -157,5 +157,19 @@ public class MapperRS{
                 resultSet.getString(2),
                 UserRole.valueOf(resultSet.getString(3)),
                 resultSet.getString(4));
+    }
+
+    public OccupantInfo rowMapperOccupantInfo(ResultSet resultSet) throws SQLException {
+        return new OccupantInfo(resultSet.getLong(1),
+                resultSet.getString(2),
+                resultSet.getString(3),
+                resultSet.getString(4),
+                resultSet.getLong(5),
+                resultSet.getString(6));
+    }
+
+    public OccupantProperty rowMapperOccupantProperty(OccupantInfo occupantInfo) {
+        String name = occupantInfo.getFirstName() + " " + occupantInfo.getMiddleName() + " " + occupantInfo.getLastName();
+        return new OccupantProperty(occupantInfo.getId(), name, occupantInfo.getRoomNumber(), occupantInfo.getTypeOccupant());
     }
 }
