@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -13,8 +13,8 @@ import java.sql.Date;
 public class Settlement {
 
   private Long id;
-  private Date dateOfSettlement;
-  private Date dateOfEviction_;
+  private LocalDate dateOfSettlement;
+  private LocalDate dateOfEviction_;
   private Long fkContract;
   private Long fkRoom;
 }

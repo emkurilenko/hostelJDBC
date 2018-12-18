@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GroupStudentsDAOImpl implements GroupStudentsDAO {
+    private final String SELECT_GROUP_NAME = "select * from group_students where name_group = ?";
     private final String SELECT_ALL = "select * from group_students";
     private final String INSERT_INTO = "insert into group_students(id,name_group, fk_specialty) values (default, ?,?) returning id";
 
@@ -28,13 +29,13 @@ public class GroupStudentsDAOImpl implements GroupStudentsDAO {
     public Long save(GroupStudents groupStudents) {
         Long id = null;
         try (PreparedStatement preparedStatement = connection.prepareStatement(INSERT_INTO)) {
-            preparedStatement.setString(1,groupStudents.getNameGroup());
+            preparedStatement.setString(1, groupStudents.getNameGroup());
             preparedStatement.setLong(2, groupStudents.getFkSpecialty());
             ResultSet resultSet = preparedStatement.executeQuery();
             resultSet.next();
             id = resultSet.getLong(1);
             resultSet.close();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("SAVE GROUP:" + e.getMessage());
         }
         return id;
@@ -57,6 +58,22 @@ public class GroupStudentsDAOImpl implements GroupStudentsDAO {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 groupStudents.add(mapperRS.rowMapperGroupStudents(resultSet));
+            }
+            resultSet.close();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return groupStudents;
+    }
+
+    @Override
+    public GroupStudents getOneByName(String name) {
+        GroupStudents groupStudents = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_GROUP_NAME)) {
+            preparedStatement.setString(1, name);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                groupStudents = mapperRS.rowMapperGroupStudents(resultSet);
             }
             resultSet.close();
         } catch (SQLException e) {

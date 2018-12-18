@@ -1,12 +1,10 @@
 package com.kurilenko.entity;
 
-import com.kurilenko.entity.enums.Gender;
-import com.kurilenko.entity.enums.OccupantType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -18,8 +16,8 @@ public class Occupant {
   private String firstName;
   private String middleName;
   private String lastName;
-  private Date dateOfBirth;
+  private LocalDate dateOfBirth;
   private String telephone;
-  private Gender gender;
-  private OccupantType occupantType;
+  private String gender;
+  private String occupantType;
 }

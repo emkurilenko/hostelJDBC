@@ -31,6 +31,9 @@ public class UniversityService {
         groupStudentsDAO = new GroupStudentsDAOImpl();
     }
 
+    public GroupStudents getGroupStudentByName(String name){
+        return groupStudentsDAO.getOneByName(name);
+    }
     public Long getIdFacultyByName(String name) {
         return facultyDAO.getFacultyByName(name).getId();
     }

@@ -17,6 +17,10 @@ public class RoomService {
         roomDAO = new RoomDAOImpl();
     }
 
+    public Room getRoomByNumberRoom(Long number){
+        return roomDAO.getRoomByNumberRoom(number);
+    }
+
     public Long saveRoom(Room room){
        Long id = roomDAO.save(room);
        return id;

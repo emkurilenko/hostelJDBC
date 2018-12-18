@@ -1,8 +1,6 @@
 package com.kurilenko.utils;
 
 import com.kurilenko.entity.*;
-import com.kurilenko.entity.enums.Gender;
-import com.kurilenko.entity.enums.OccupantType;
 import com.kurilenko.entity.enums.StatusFamily;
 import com.kurilenko.entity.enums.UserRole;
 
@@ -29,7 +27,7 @@ public class MapperRS {
     public Contract rowMapperContract(ResultSet rs) throws SQLException {
         return new Contract(rs.getLong(1),
                 rs.getString(2),
-                rs.getDate(3),
+                rs.getDate(3).toLocalDate(),
                 rs.getLong(4));
     }
 
@@ -59,8 +57,7 @@ public class MapperRS {
     public Families rowMapperFamilies(ResultSet rs) throws SQLException {
         return new Families(rs.getLong(1),
                 rs.getLong(2),
-                rs.getLong(3),
-                StatusFamily.valueOf(rs.getString(3)));
+                rs.getLong(3));
     }
 
     public Floors rowMapperFloors(ResultSet rs) throws SQLException {
@@ -88,17 +85,18 @@ public class MapperRS {
                 rs.getString(2),
                 rs.getString(3),
                 rs.getString(4),
-                rs.getDate(5),
+                rs.getDate(5).toLocalDate(),
                 rs.getString(6),
-                Gender.valueOf(rs.getString(7)),
-                OccupantType.valueOf(rs.getString(8)));
+                rs.getString(7),
+                rs.getString(8));
     }
 
     public Parents rowMapperParents(ResultSet rs) throws SQLException {
         return new Parents(rs.getLong(1),
                 rs.getString(2),
                 rs.getString(3),
-                rs.getString(4));
+                rs.getString(4),
+                StatusFamily.valueOf(rs.getString(5)));
     }
 
     public Payment rowMapperPayment(ResultSet rs) throws SQLException {
@@ -125,8 +123,8 @@ public class MapperRS {
 
     public Settlement rowMapperSettlement(ResultSet rs) throws SQLException {
         return new Settlement(rs.getLong(1),
-                rs.getDate(2),
-                rs.getDate(3),
+                rs.getDate(2).toLocalDate(),
+                rs.getDate(3).toLocalDate(),
                 rs.getLong(4),
                 rs.getLong(5));
     }

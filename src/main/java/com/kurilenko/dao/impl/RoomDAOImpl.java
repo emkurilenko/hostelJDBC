@@ -17,6 +17,7 @@ public class RoomDAOImpl implements RoomDAO {
 
     private String INSERT_ROOM = "insert into room (id,number_room,square,fk_room_specification,number,fk_hostel,floor) values (DEFAULT,?,?,?,?,?,?) returning id";
     private String SELECT_ALL = "select * from room";
+    private String SELECT_BY_NUMBER_ROOM = "select * from room where number_room = ?";
     private MapperRS mapperRS;
     private final Connection connection;
 
@@ -65,10 +66,10 @@ public class RoomDAOImpl implements RoomDAO {
         List<Room> list = new ArrayList<>();
         try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL)) {
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 list.add(mapperRS.rowMapperRoom(resultSet));
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return list;
@@ -88,5 +89,19 @@ public class RoomDAOImpl implements RoomDAO {
             System.out.println(e.getMessage());
         }
         return listRooms;
+    }
+
+    @Override
+    public Room getRoomByNumberRoom(Long numberRoom) {
+        Room room = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_BY_NUMBER_ROOM)) {
+            preparedStatement.setLong(1, numberRoom);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            room = mapperRS.rowMapperRoom(resultSet);
+        } catch (SQLException e) {
+            System.out.println("getRoomByNumberRoom:  " + e.getMessage());
+        }
+        return room;
     }
 }

@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface RoomDAO extends BaseDAO<Room, Long> {
     List<?> getAllInfoRooms(Long idHostel);
+    Room getRoomByNumberRoom(Long numberRoom);
 }

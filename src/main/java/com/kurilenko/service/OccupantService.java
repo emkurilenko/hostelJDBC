@@ -2,6 +2,7 @@ package com.kurilenko.service;
 
 import com.kurilenko.dao.OccupantDAO;
 import com.kurilenko.dao.impl.OccupantDAOImpl;
+import com.kurilenko.entity.Occupant;
 import com.kurilenko.entity.OccupantProperty;
 import com.kurilenko.utils.MapperRS;
 import javafx.collections.FXCollections;
@@ -33,4 +34,11 @@ public class OccupantService {
         return occupantProperties;
     }
 
+    public Long save(Occupant occupant){
+        return occupantDAO.save(occupant);
+    }
+
+    public void delete(Long id) {
+        occupantDAO.delete(id);
+    }
 }
