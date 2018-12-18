@@ -47,6 +47,7 @@ public class UserEditController {
         userService = new UserService();
         hostelService = new HostelService();
         fielduserName.setText(userInfo.getUsername().getValue());
+        fielduserName.setDisable(true);
         comboBoxHostel.setPromptText(userInfo.getHostelName().getValue());
         comboBoxRole.setPromptText(userInfo.getRole().getValue());
         comboBoxHostel.getItems().addAll(hostelService.getAllNameHostel());

@@ -3,6 +3,7 @@ package com.kurilenko.controller;
 import com.kurilenko.entity.User;
 import com.kurilenko.service.UserService;
 import com.kurilenko.utils.CurrentSession;
+import com.kurilenko.utils.HelperWorkWithModalityWindow;
 import com.kurilenko.utils.MD5;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -10,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -71,7 +73,7 @@ public class LoginController {
                 System.out.println(e);
             }
         }else
-            System.out.println("very bad");
+            HelperWorkWithModalityWindow.showDialog("Ошибка! Пользователь не найден!", "Проверьте правильность ввода", Alert.AlertType.WARNING);
         cleanField();
     }
 
@@ -79,5 +81,6 @@ public class LoginController {
         fieldLogin.clear();
         filedPassword.clear();
     }
+
 
 }

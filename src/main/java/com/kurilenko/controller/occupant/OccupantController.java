@@ -80,10 +80,11 @@ public class OccupantController {
 
     private void refreshDataOnTable() {
         Platform.runLater(() -> {
-            if (CurrentSession.user.getUserRole() == UserRole.ROLE_ADMIN && CurrentSession.user.getUsername().equals("admin")) {
-                data = occupantService.getAllOccupantPropertyAdmin();
-            } else {
-                data = occupantService.getAllOccupantProperty(hostelService.getHostelByUserId(CurrentSession.user.getId()).getId());
+            if (CurrentSession.user != null) {
+                if (CurrentSession.user.getUserRole() == UserRole.ROLE_ADMIN && CurrentSession.user.getUsername().equals("admin")) {
+                    data = occupantService.getAllOccupantPropertyAdmin();
+                } else
+                    data = occupantService.getAllOccupantProperty(hostelService.getHostelByUserId(CurrentSession.user.getId()).getId());
             }
             tableViewOccupant.setRoot(new RecursiveTreeItem<>(data, RecursiveTreeObject::getChildren));
         });

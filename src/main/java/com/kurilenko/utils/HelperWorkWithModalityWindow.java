@@ -8,6 +8,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
@@ -53,5 +54,12 @@ public class HelperWorkWithModalityWindow {
         });
         content.setActions(button);
         dialog.show();
+    }
+
+    public static void showDialog(String title, String context, Alert.AlertType alertType){
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setContentText(context);
+        alert.showAndWait();
     }
 }

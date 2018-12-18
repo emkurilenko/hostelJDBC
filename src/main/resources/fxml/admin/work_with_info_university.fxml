@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="anhorPaneUn" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kurilenko.controller.admin.WorkInfoUniversityController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e8eaf6;">
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="500.0" style="-fx-background-color: #b6b8c3;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton onMouseClicked="#btnCancelMouseClicked" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ae52d4;" text="Назад">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAddButton" onMouseClicked="#btnAddButtonMouseClicked" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ae52d4;" text="Добавить">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDeleteGroup" onMouseClicked="#btnDeleteGroupMouseClicked" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #ae52d4;" text="Удалить группу" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="500.0">
+                     <children>
+                        <JFXComboBox fx:id="comBoxFaculty" onAction="#comBoxFacultyAction" prefHeight="25.0" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="comboBoxDepartment" onAction="#comboBoxDepartmentAction" prefHeight="25.0" prefWidth="203.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="500.0">
+                     <children>
+                        <JFXComboBox fx:id="comboBoxSpeciality" onAction="#comboBoxSpecialityAction" prefHeight="25.0" prefWidth="150.0" />
+                        <JFXToggleButton fx:id="toggleButtonNewSpeciality" onMouseClicked="#toggleButtonNewSpecialityMouseClicked" text="New">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <JFXTextField fx:id="fieldNewSpeciality">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="500.0">
+                     <children>
+                        <JFXComboBox fx:id="comboBoxGroupStudent" onAction="#comboBoxGroupStudentAction" prefWidth="150.0" />
+                        <JFXToggleButton fx:id="toggleButtonNewGroup" onMouseClicked="#toggleButtonNewGroupMouseClicked" text="New">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <JFXTextField fx:id="fieldGroupStudent" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
