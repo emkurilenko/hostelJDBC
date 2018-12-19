@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<BorderPane fx:id="roomTab" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kurilenko.controller.room.RoomController">
+<BorderPane fx:id="roomTab" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kurilenko.controller.room.RoomController">
     <center>
         <JFXTreeTableView fx:id="tableViewRooms" BorderPane.alignment="CENTER">
         </JFXTreeTableView>
@@ -23,7 +23,7 @@
                   <Font name="Verdana" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnDelRoom" onMouseClicked="#btnDelRoomMouseClicked" prefHeight="100.0" prefWidth="100.0" ripplerFill="#757de8" text="Удалить" textAlignment="CENTER" wrapText="true">
+            <JFXButton fx:id="btnDelRoom" onMouseClicked="#btnDelRoomMouseClicked" prefHeight="100.0" prefWidth="100.0" ripplerFill="#757de8" text="Изменить" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="Verdana" size="12.0" />
                </font>

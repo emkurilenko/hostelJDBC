@@ -33,7 +33,7 @@ public class ParentsDAOImpl implements ParentsDAO {
             preparedStatement.setString(2, parents.getFirstName());
             preparedStatement.setString(3, parents.getMiddleName());
             preparedStatement.setString(4, parents.getLastName());
-            preparedStatement.setString(5, parents.getStatus().getType());
+            preparedStatement.setString(5, parents.getStatus());
             ResultSet resultSet = preparedStatement.executeQuery();
             resultSet.next();
             _id = resultSet.getLong(1);

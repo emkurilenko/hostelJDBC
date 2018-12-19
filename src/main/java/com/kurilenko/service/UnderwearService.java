@@ -19,4 +19,8 @@ public class UnderwearService {
         names.addAll(underwearDAO.getAll().stream().map(underwear -> underwear.getNameUnderwerar()).collect(Collectors.toList()));
         return names;
     }
+
+    public Long saveChoiceUnderwearByContract(String name, Long id) {
+        return underwearDAO.saveUnderwearWithIdContract(name, id);
+    }
 }

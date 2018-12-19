@@ -34,11 +34,15 @@ public class OccupantService {
         return occupantProperties;
     }
 
-    public Long save(Occupant occupant){
+    public Long save(Occupant occupant) {
         return occupantDAO.save(occupant);
     }
 
     public void delete(Long id) {
         occupantDAO.delete(id);
+    }
+
+    public Occupant getById(Long id) {
+        return occupantDAO.getOneById(id);
     }
 }

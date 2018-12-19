@@ -14,6 +14,7 @@ import java.util.List;
 public class StudentDAOImpl implements StudentDAO {
     private String INSERT_STUDENT = "select * from insert_into_student(?,?,?)";
     private String DELETE_BY_ID = "delete from student where id = ?";
+    private String SELECT_BY_ID = "select * from student where id = ?";
 
     private Connection connection;
     private MapperRS mapperRS;
@@ -52,7 +53,17 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public Student getOneById(Long aLong) {
-        return null;
+        Student student = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_BY_ID)){
+            preparedStatement.setLong(1, aLong);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            student = mapperRS.rowMapperStudent(resultSet);
+            resultSet.close();
+        }catch (SQLException e){
+            System.out.println("STUDENT" + e.getMessage());
+        }
+        return student;
     }
 
     @Override

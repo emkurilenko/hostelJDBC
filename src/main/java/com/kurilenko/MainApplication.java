@@ -22,6 +22,7 @@ public class MainApplication extends Application {
         Parent parent = (Parent)loader.load();
         LoginController loginController = loader.getController();
         stage.setScene(new Scene(parent));
+        primaryStage.setResizable(false);
         loginController.setPrimaryStage(stage);
         stage.show();
     }

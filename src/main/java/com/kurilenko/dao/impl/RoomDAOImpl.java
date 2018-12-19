@@ -3,6 +3,7 @@ package com.kurilenko.dao.impl;
 import com.kurilenko.dao.RoomDAO;
 import com.kurilenko.entity.Room;
 import com.kurilenko.entity.RoomInfo;
+import com.kurilenko.entity.RoomSpecification;
 import com.kurilenko.utils.DBConnection;
 import com.kurilenko.utils.MapperRS;
 
@@ -18,6 +19,15 @@ public class RoomDAOImpl implements RoomDAO {
     private String INSERT_ROOM = "insert into room (id,number_room,square,fk_room_specification,number,fk_hostel,floor) values (DEFAULT,?,?,?,?,?,?) returning id";
     private String SELECT_ALL = "select * from room";
     private String SELECT_BY_NUMBER_ROOM = "select * from room where number_room = ?";
+
+    private final String INCEMENT_ROOM = "update room set number = number+1 where number_room = ?";
+    private final String SELECT_ROOM_NUMBER_BY_ID_OCCUPANT = "select r.number_room\n" +
+            "from room as r\n" +
+            "       inner join settlement s2 on r.id = s2.fk_room\n" +
+            "       inner join contract c2 on s2.fk_contract = c2.id\n" +
+            "       inner join occupant o on c2.fk_occupant = o.id\n" +
+            "where o.id = ?";
+
     private MapperRS mapperRS;
     private final Connection connection;
 
@@ -103,5 +113,33 @@ public class RoomDAOImpl implements RoomDAO {
             System.out.println("getRoomByNumberRoom:  " + e.getMessage());
         }
         return room;
+    }
+
+    public void incrementRoomInNumber(Long name) {
+        Room room = getRoomByNumberRoom(name);
+        RoomSpecification oneById = new RoomSpecificationDAOImpl().getOneById(room.getRoomSpecification());
+        if (room.getNumber() < oneById.getNumberOfBeds()) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement(INCEMENT_ROOM)) {
+                preparedStatement.setLong(1, name);
+                preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                System.out.println("incrementRoomInNumber " + e.getMessage());
+            }
+        }
+    }
+
+    @Override
+    public Long getRoomNumberByIdOccupant(Long idOccupant) {
+        Long number = null;
+        try (PreparedStatement preparedStatement =connection.prepareStatement(SELECT_ROOM_NUMBER_BY_ID_OCCUPANT)){
+            preparedStatement.setLong(1,idOccupant);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            number = resultSet.getLong(1);
+            resultSet.close();
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return null;
     }
 }

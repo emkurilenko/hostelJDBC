@@ -18,7 +18,7 @@ public class OccupantDAOImpl implements OccupantDAO {
     private final String SELECT_ALL_INFO_BY_ID_HOSTEL_ADMIN = "select * from get_occupant_info_property_all_admin()";
     private final String INSERT_NEW_OCCUPANT = "select *from insert_into_occupant(?,?,?,?,?,?,?)";
     private final String DELETE_BY_ID = "delete from occupant where id = ?";
-
+    private final String SELECT_OCCUPANT_BY_ID = "select * from occupant where id = ?";
     private Connection connection;
     private MapperRS mapperRS;
 
@@ -49,17 +49,27 @@ public class OccupantDAOImpl implements OccupantDAO {
 
     @Override
     public void delete(Long id) {
-        try (PreparedStatement preparedStatement =connection.prepareStatement(DELETE_BY_ID)) {
-            preparedStatement.setLong(1,1);
+        try (PreparedStatement preparedStatement = connection.prepareStatement(DELETE_BY_ID)) {
+            preparedStatement.setLong(1, 1);
             preparedStatement.executeUpdate();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("DELETE OCCUPANT: " + e.getMessage());
         }
     }
 
     @Override
     public Occupant getOneById(Long aLong) {
-        return null;
+        Occupant occupant = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_OCCUPANT_BY_ID)) {
+            preparedStatement.setLong(1, aLong);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            occupant = mapperRS.rowMapperOccupant(resultSet);
+            resultSet.close();
+        } catch (SQLException e) {
+            System.out.println("GET OCCUPANT: " + e.getMessage());
+        }
+        return occupant;
     }
 
     @Override

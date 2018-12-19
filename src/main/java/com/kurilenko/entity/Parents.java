@@ -1,6 +1,5 @@
 package com.kurilenko.entity;
 
-import com.kurilenko.entity.enums.StatusFamily;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,5 +14,5 @@ public class Parents {
   private String firstName;
   private String middleName;
   private String lastName;
-  private StatusFamily status;
+  private String status;
 }

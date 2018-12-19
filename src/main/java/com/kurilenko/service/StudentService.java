@@ -18,4 +18,8 @@ public class StudentService {
     public void delete(Long id){
         studentDAO.delete(id);
     }
+
+    public Student getByID(Long idOccupant) {
+        return studentDAO.getOneById(idOccupant);
+    }
 }

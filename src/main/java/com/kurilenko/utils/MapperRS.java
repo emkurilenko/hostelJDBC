@@ -1,7 +1,6 @@
 package com.kurilenko.utils;
 
 import com.kurilenko.entity.*;
-import com.kurilenko.entity.enums.StatusFamily;
 import com.kurilenko.entity.enums.UserRole;
 
 import java.sql.ResultSet;
@@ -96,7 +95,7 @@ public class MapperRS {
                 rs.getString(2),
                 rs.getString(3),
                 rs.getString(4),
-                StatusFamily.valueOf(rs.getString(5)));
+                rs.getString(5));
     }
 
     public Payment rowMapperPayment(ResultSet rs) throws SQLException {

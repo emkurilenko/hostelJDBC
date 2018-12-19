@@ -21,6 +21,10 @@ public class RoomSpecificationService {
         return roomSpecificationDAO.getOneByType(type).getNumberOfBeds();
     }
 
+    public RoomSpecification getRoomSpecification(Long id){
+        return roomSpecificationDAO.getOneById(id);
+    }
+
     public RoomSpecification getBySpecification(String type){
         return roomSpecificationDAO.getOneByType(type);
     }

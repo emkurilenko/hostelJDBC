@@ -4,7 +4,6 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import com.kurilenko.entity.*;
-import com.kurilenko.entity.enums.StatusFamily;
 import com.kurilenko.service.*;
 import com.kurilenko.utils.CurrentSession;
 import com.kurilenko.utils.HelperWorkWithModalityWindow;
@@ -119,9 +118,10 @@ public class RegistrationController {
 
     @FXML
     void comboBoxFloorsAction(ActionEvent event) {
+
         comboBoxRoom.getItems().clear();
         comboBoxRoom.setDisable(false);
-        comboBoxRoom.getItems().addAll(roomService.getAllRoomNumber(Long.valueOf(comboBoxFloors.getValue())));
+        comboBoxRoom.getItems().addAll(roomService.getAllRoomNumberFree(Long.valueOf(comboBoxFloors.getValue())));
 
     }
 
@@ -231,13 +231,19 @@ public class RegistrationController {
                                             Settlement settlement = new Settlement(0L, dateOfSettlement.getValue(), dateOfEviction.getValue(), 0L, roomService.getRoomByNumberRoom(comboBoxRoom.getValue()).getId());
                                             Long idContract = contractService.createContractWithSettlement(contract, settlement);
                                             if (idContract != 0) {
-
+                                                if(!listUnderwear.isEmpty()){
+                                                    listUnderwear.forEach(un -> underviewerService.saveChoiceUnderwearByContract(un, idContract));
+                                                }
+                                                roomService.incrementRoomInNumber(comboBoxRoom.getValue());
+                                                HelperWorkWithModalityWindow.showDialog("Все ок!", "Успешное добавление", Alert.AlertType.INFORMATION);
+                                                clearFields();
                                             } else {
                                                 parentService.deleteParent(idFather);
                                                 parentService.deleteParent(idMother);
                                                 studentService.delete(idStudent);
                                                 occupantService.delete(idOccupant);
                                                 HelperWorkWithModalityWindow.showDialog("Ошибка", "Ошибка создания договора", Alert.AlertType.WARNING);
+                                                clearFields();
                                             }
                                         } else {
                                             HelperWorkWithModalityWindow.showDialog("Ошибка", "Ошибка сохранения информации о родителях в бд", Alert.AlertType.WARNING);
@@ -245,15 +251,18 @@ public class RegistrationController {
                                             parentService.deleteParent(idMother);
                                             studentService.delete(idStudent);
                                             occupantService.delete(idOccupant);
+                                            clearFields();
                                         }
                                     } else {
                                         HelperWorkWithModalityWindow.showDialog("Ошибка", "Ошибка сохранения инфы о студенте", Alert.AlertType.WARNING);
                                         studentService.delete(idStudent);
+                                        clearFields();
                                     }
                                 }
                             } else {
                                 HelperWorkWithModalityWindow.showDialog("Ошибка", "Данный житель уже существует", Alert.AlertType.WARNING);
                                 occupantService.delete(idOccupant);
+                                clearFields();
                             }
                         }
                     }
@@ -272,29 +281,41 @@ public class RegistrationController {
                                 Settlement settlement = new Settlement(0L, dateOfSettlement.getValue(), dateOfEviction.getValue(), 0L, roomService.getRoomByNumberRoom(comboBoxRoom.getValue()).getId());
                                 Long idContract = contractService.createContractWithSettlement(contract, settlement);
                                 if (idContract != 0) {
-
+                                    if(!listUnderwear.isEmpty()){
+                                        listUnderwear.forEach(un -> underviewerService.saveChoiceUnderwearByContract(un, idContract));
+                                    }
+                                    roomService.incrementRoomInNumber(comboBoxRoom.getValue());
+                                    HelperWorkWithModalityWindow.showDialog("Все ок!", "Успешное добавление", Alert.AlertType.INFORMATION);
+                                    clearFields();
                                 } else {
                                     employeesService.delete(idEmployes);
                                     occupantService.delete(idOccupant);
                                     HelperWorkWithModalityWindow.showDialog("Ошибка", "Ошибка создания договора", Alert.AlertType.WARNING);
-
+                                    clearFields();
                                 }
                             } else {
                                 HelperWorkWithModalityWindow.showDialog("Ошибка", "Ошибка сохранения", Alert.AlertType.WARNING);
                                 employeesService.delete(idEmployes);
+                                clearFields();
                             }
                         }
                     } else {
                         HelperWorkWithModalityWindow.showDialog("Ошибка", "Данный житель уже существует", Alert.AlertType.WARNING);
                         occupantService.delete(idOccupant);
+                        clearFields();
                     }
                 }
             }
+            else {
+                HelperWorkWithModalityWindow.showDialog("Ошибка", "Не все поля заполены, либо некорректны данные", Alert.AlertType.ERROR);
+            }
+        }else {
+            HelperWorkWithModalityWindow.showDialog("Ошибка", "Не все поля заполены", Alert.AlertType.ERROR);
         }
     }
 
     private Parents getParrent(String[] fields, String status) {
-        return new Parents(0L, fields[0], fields[1], fields[2], StatusFamily.valueOf(status));
+        return new Parents(0L, fields[0], fields[1], fields[2], status);
     }
 
     @FXML
@@ -343,10 +364,10 @@ public class RegistrationController {
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
 
          {
-             dateDBPicker.setPromptText(pattern.toLowerCase());
+             /*dateDBPicker.setPromptText(pattern.toLowerCase());
              dateOfEviction.setPromptText(pattern.toLowerCase());
              dateOfSettlement.setPromptText(pattern.toLowerCase());
-             dateCreationContract.setPromptText(pattern.toLowerCase());
+             dateCreationContract.setPromptText(pattern.toLowerCase());*/
          }
 
         @Override
@@ -367,5 +388,29 @@ public class RegistrationController {
             }
         }
     };
+
+    private void clearFields(){
+        fieldName.clear();
+        fieldNumberContract.clear();
+        fieldFather.clear();
+        fieldNumberInFamily.clear();
+        fieldTelephone.clear();
+        fieldLastName.clear();
+        fieldMiddleName.clear();
+        fileldMother.clear();
+
+        comboBoxGroupStudent.getSelectionModel().clearSelection();
+        comboBoxSpeciality.getSelectionModel().clearSelection();
+        //comboBoxFaculty.getSelectionModel().clearSelection();
+        //comboBoxTypeOccupation.getSelectionModel().clearSelection();
+        //comboBoxDepartment.getSelectionModel().clearSelection();
+        //comboBoxRoom.getSelectionModel().clearSelection();
+        //comboBoxGender.getSelectionModel().clearSelection();
+        //comboBoxFloors.getSelectionModel().clearSelection();
+        dateCreationContract.setValue(null);
+        dateOfSettlement.setValue(null);
+        dateOfEviction.setValue(null);
+        dateDBPicker.setValue(null);
+    }
 }
 

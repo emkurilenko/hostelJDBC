@@ -1,5 +1,6 @@
 package com.kurilenko.controller.occupant;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTreeTableColumn;
 import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.controls.RecursiveTreeItem;
@@ -10,13 +11,19 @@ import com.kurilenko.entity.enums.UserRole;
 import com.kurilenko.service.HostelService;
 import com.kurilenko.service.OccupantService;
 import com.kurilenko.utils.CurrentSession;
+import com.kurilenko.utils.HelperWorkWithModalityWindow;
 import javafx.application.Platform;
+import javafx.beans.binding.Bindings;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TreeTableColumn;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
+import java.io.IOException;
 import java.util.function.Function;
 
 public class OccupantController {
@@ -27,7 +34,6 @@ public class OccupantController {
 
     private OccupantService occupantService;
     private HostelService hostelService;
-
 
     private User user;
 
@@ -40,6 +46,13 @@ public class OccupantController {
     private JFXTreeTableView<OccupantProperty> tableViewOccupant;
 
     @FXML
+    private JFXButton btnInfoOccupant;
+
+    @FXML
+    private JFXButton btnMoveOut;
+
+
+    @FXML
     private void initialize() {
         hostelService = new HostelService();
         occupantService = new OccupantService();
@@ -47,6 +60,11 @@ public class OccupantController {
         Platform.runLater(() ->
                 user = CurrentSession.user
         );
+    }
+
+    @FXML
+    void refreshMouseClicked(MouseEvent event) {
+        refreshDataOnTable();
     }
 
     private void setupTableView() {
@@ -62,7 +80,30 @@ public class OccupantController {
 
         tableViewOccupant.setShowRoot(false);
 
+        btnInfoOccupant.disableProperty().bind(Bindings.equal(-1, tableViewOccupant.getSelectionModel().selectedIndexProperty()));
+
+        btnMoveOut.disableProperty().bind(Bindings.equal(-1, tableViewOccupant.getSelectionModel().selectedIndexProperty()));
+
+        btnMoveOut.setOnMouseClicked(event -> {
+            OccupantProperty occupantProperty = data.get(tableViewOccupant.getSelectionModel().selectedIndexProperty().get());
+            occupantService.delete(occupantProperty.getId().get());
+            refreshDataOnTable();
+            HelperWorkWithModalityWindow.showDialog("Успешно", "", Alert.AlertType.CONFIRMATION);
+        });
+
+        btnInfoOccupant.setOnMouseClicked(event -> {
+            OccupantProperty occupantProperty = data.get(tableViewOccupant.getSelectionModel().selectedIndexProperty().get());
+            InfoOccupantController infoOccupantController = new InfoOccupantController();
+            infoOccupantController.setIdOccupant(occupantProperty.getId().get());
+            try {
+                HelperWorkWithModalityWindow.loadNewModalityWindowWithController("fxml/info/info_occupant.fxml", "Инфо", ((Node) event.getSource()).getScene().getWindow(), infoOccupantController);
+            } catch (IOException e) {
+                System.out.println("EXCEPTION in OCCUPANT Controller: " + e.getMessage());
+            }
+        });
+
         refreshDataOnTable();
+
 
         tableViewOccupant.getColumns().setAll(occupantName, roomNumber, typeOccupant);
     }

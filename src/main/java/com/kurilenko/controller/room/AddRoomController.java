@@ -110,6 +110,12 @@ public class AddRoomController {
     }
 
     @FXML
+    public void btnCancelMouseClicked(MouseEvent e){
+        Stage stage = (Stage) stackPane.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
     public void initialize() {
         roomSpecificationService = new RoomSpecificationService();
         hostelService = new HostelService();
