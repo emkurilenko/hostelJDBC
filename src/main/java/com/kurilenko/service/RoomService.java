@@ -60,6 +60,10 @@ public class RoomService {
         roomDAO.delete(Long.valueOf(roomProperty.getId().getValue()));
     }
 
+    public int deleteForResut(RoomProperty roomProperty) {
+      return  roomDAO.deleteResult(Long.valueOf(roomProperty.getId().getValue()));
+    }
+
     public void incrementRoomInNumber(Long name){
         roomDAO.incrementRoomInNumber(name);
     }

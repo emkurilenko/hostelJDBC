@@ -14,7 +14,7 @@ import java.util.List;
 
 public class UnderwearDAOImpl implements UnderwearDAO {
     private final String SELECT_ALL = "select * from underwear";
-    private final String INSERT_INTO_ISSUED_LINEN = "insert into issued_linen values(?,?)";
+    private final String INSERT_INTO_ISSUED_LINEN = "insert into issued_linen values(?,?) return";
     private final String SELECT_ONE_BY_NAME = "select * from underwear where name_underwerar = ?";
     private Connection connection;
     private MapperRS mapperRS;

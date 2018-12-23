@@ -10,4 +10,5 @@ public interface RoomDAO extends BaseDAO<Room, Long> {
     void incrementRoomInNumber(Long name);
 
     Long getRoomNumberByIdOccupant(Long idOccupant);
+    int deleteResult(Long room);
 }

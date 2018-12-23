@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RoomDAOImpl implements RoomDAO {
-
     private String INSERT_ROOM = "insert into room (id,number_room,square,fk_room_specification,number,fk_hostel,floor) values (DEFAULT,?,?,?,?,?,?) returning id";
     private String SELECT_ALL = "select * from room";
     private String SELECT_BY_NUMBER_ROOM = "select * from room where number_room = ?";
@@ -57,13 +56,24 @@ public class RoomDAOImpl implements RoomDAO {
     }
 
     @Override
-    public void delete(Long room) {
+    public void delete(Long id) {
+        try (PreparedStatement preparedStatement = connection.prepareStatement("delete from room where id = ?")) {
+            preparedStatement.setLong(1, id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public int deleteResult(Long room) {
         try (PreparedStatement preparedStatement = connection.prepareStatement("delete from room where id = ?")) {
             preparedStatement.setLong(1, room);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            return 0;
         }
+        return 1;
     }
 
     @Override
@@ -140,6 +150,6 @@ public class RoomDAOImpl implements RoomDAO {
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
-        return null;
+        return number;
     }
 }

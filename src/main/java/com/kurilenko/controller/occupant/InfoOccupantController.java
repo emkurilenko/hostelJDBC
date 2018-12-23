@@ -76,6 +76,7 @@ public class InfoOccupantController {
             fieldDateBirthday.setText(occupant.getDateOfBirth().toString());
             fieldType.setText(occupant.getOccupantType());
             fieldRoom.setText(String.valueOf(roomService.getRoomNumberByIdOccupant(idOccupant)));
+
             if (occupant.getOccupantType().equals("Студент")) {
                 studentService = new StudentService();
                 Student student = studentService.getByID(idOccupant);

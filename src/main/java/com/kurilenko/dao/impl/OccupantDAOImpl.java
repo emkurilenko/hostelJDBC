@@ -50,7 +50,7 @@ public class OccupantDAOImpl implements OccupantDAO {
     @Override
     public void delete(Long id) {
         try (PreparedStatement preparedStatement = connection.prepareStatement(DELETE_BY_ID)) {
-            preparedStatement.setLong(1, 1);
+            preparedStatement.setLong(1, id);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             System.out.println("DELETE OCCUPANT: " + e.getMessage());

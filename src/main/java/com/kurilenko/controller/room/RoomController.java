@@ -107,8 +107,9 @@ public class RoomController {
 
         btnDelRoom.setOnMouseClicked(event -> {
             RoomProperty roomProperty = data.get(tableViewRooms.getSelectionModel().selectedIndexProperty().get());
-            data.remove(tableViewRooms.getSelectionModel().selectedIndexProperty().get());
-            roomService.delete(roomProperty);
+            if(roomService.deleteForResut(roomProperty) == 1) {
+                data.remove(tableViewRooms.getSelectionModel().selectedIndexProperty().get());
+            }
         });
 
         tableViewRooms.getColumns().setAll(roomFloor, numberRoom, busyNumRoom, summaryNumRoom, specificationRoom);
